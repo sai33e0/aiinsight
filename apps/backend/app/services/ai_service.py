@@ -233,7 +233,8 @@ class AIService:
     async def generate_document_questions(self, document_content: str, num_questions: int = 5) -> List[str]:
         """Generate questions based on document content."""
         try:
-            response = await openai.ChatCompletion.acreate(
+            client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+            response = await client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {
