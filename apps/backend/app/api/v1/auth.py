@@ -4,6 +4,7 @@ from fastapi.security import HTTPBearer
 
 from app.core.database import get_db
 from app.api.deps import get_auth_service, get_current_user
+from app.services.auth_service import AuthService
 from app.schemas.user import (
     UserLogin, UserRegister, AuthTokens, PasswordResetRequest,
     PasswordReset, UserResponse, UserUpdate, UserCreate
