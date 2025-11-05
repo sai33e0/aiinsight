@@ -100,7 +100,7 @@ class Document(Base):
 
     def to_dict(self):
         """Convert document to dictionary."""
-        data = Base.to_dict(self)
+        data = super().to_dict()
         # Include file size in human readable format
         data["file_size_mb"] = round(self.file_size / (1024 * 1024), 2)
         return data
