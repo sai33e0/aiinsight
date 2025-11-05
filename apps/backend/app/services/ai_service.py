@@ -204,7 +204,8 @@ class AIService:
         """Classify text into categories."""
         try:
             categories_str = ", ".join(categories)
-            response = await openai.ChatCompletion.acreate(
+            client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+            response = await client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {
