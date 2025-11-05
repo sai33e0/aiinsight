@@ -1,6 +1,7 @@
 from sqlalchemy import Column, String, Integer, DateTime, Boolean, Text, Enum as SQLEnum
 from sqlalchemy.orm import relationship
 import enum
+from datetime import datetime, timezone
 
 from app.core.database import Base
 from app.core.security import get_password_hash
