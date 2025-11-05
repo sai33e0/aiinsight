@@ -41,7 +41,10 @@
     "react-hot-toast": "^2.4.1",
     "date-fns": "^2.30.0",
     "recharts": "^2.8.0",
-    "lucide-react": "^0.290.0"
+    "lucide-react": "^0.290.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "eslint": "^8.53.0",
