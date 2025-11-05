@@ -7,6 +7,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.schema import HumanMessage, AIMessage, SystemMessage
 from langchain.callbacks.streaming_aiter import AsyncIteratorCallbackHandler
 import openai
+from openai import AsyncOpenAI
 
 from app.core.config import settings
 from app.core.exceptions import AIServiceError
