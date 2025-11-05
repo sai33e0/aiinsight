@@ -1,0 +1,119 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Explicitly declare text files you want to always be normalized
+*.css text
+*.html text
+*.js text
+*.json text
+*.jsx text
+*.md text
+*.py text
+*.sh text
+*.ts text
+*.tsx text
+*.yaml text
+*.yml text
+
+# Declare files that will always have CRLF line endings on checkout
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Declare files that will always have LF line endings on checkout
+*.ps1 text eol=lf
+*.sh text eol=lf
+
+# Denote all files that are truly binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.rar binary
+
+# Large files
+*.7z binary
+*.dmg binary
+*.exe binary
+*.iso binary
+*.msi binary
+*.pkg binary
+
+# Database files
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# Compiled files
+*.pyc binary
+*.pyo binary
+*.pyd binary
+*.so binary
+*.dll binary
+*.dylib binary
+
+# Node.js
+node_modules/ text eol=lf linguist-generated
+npm-debug.log* text eol=lf linguist-generated
+yarn-debug.log* text eol=lf linguist-generated
+yarn-error.log* text eol=lf linguist-generated
+.pnpm-debug.log* text eol=lf linguist-generated
+
+# Python
+__pycache__/ text eol=lf linguist-generated
+*.py[cod] text eol=lf linguist-generated
+*$py.class text eol=lf linguist-generated
+*.so text eol=lf linguist-generated
+.Python text eol=lf linguist-generated
+build/ text eol=lf linguist-generated
+develop-eggs/ text eol=lf linguist-generated
+dist/ text eol=lf linguist-generated
+downloads/ text eol=lf linguist-generated
+eggs/ text eol=lf linguist-generated
+.eggs/ text eol=lf linguist-generated
+lib/ text eol=lf linguist-generated
+lib64/ text eol=lf linguist-generated
+parts/ text eol=lf linguist-generated
+sdist/ text eol=lf linguist-generated
+var/ text eol=lf linguist-generated
+wheels/ text eol=lf linguist-generated
+*.egg-info/ text eol=lf linguist-generated
+.installed.cfg text eol=lf linguist-generated
+*.egg text eol=lf linguist-generated
+
+# Jupyter Notebook
+*.ipynb text eol=lf
+
+# Next.js
+.next/ text eol=lf linguist-generated
+out/ text eol=lf linguist-generated
+.vercel text eol=lf linguist-generated
+
+# Environment files
+.env text eol=lf linguist-generated
+.env.* text eol=lf linguist-generated
+
+# Logs
+logs text eol=lf linguist-generated
+*.log text eol=lf linguist-generated
+
+# Vector store files
+*.index binary
+*.bin binary
+
+# Upload directories
+uploads/ text eol=lf linguist-generated
+vector_store/ text eol=lf linguist-generated
+
+# IDE
+.vscode/ text eol=lf linguist-generated
+.idea/ text eol=lf linguist-generated
+
+# OS
+.DS_Store text eol=lf linguist-generated
+Thumbs.db text eol=lf linguist-generated
