@@ -135,7 +135,9 @@ class User(Base):
 
     def to_dict(self, include_sensitive: bool = False):
         """Convert user to dictionary."""
-        data = super().to_dict()
+        from app.models.base import BaseModel
+
+        data = BaseModel.to_dict(self)
         if not include_sensitive:
             # Remove sensitive fields
             data.pop("hashed_password", None)
