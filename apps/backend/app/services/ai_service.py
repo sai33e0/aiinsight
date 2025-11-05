@@ -122,8 +122,9 @@ class AIService:
     async def analyze_sentiment(self, text: str) -> Dict[str, float]:
         """Analyze sentiment of text."""
         try:
+            client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
             # Use OpenAI's completion API for sentiment analysis
-            response = await openai.ChatCompletion.acreate(
+            response = await client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {
