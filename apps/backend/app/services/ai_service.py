@@ -152,7 +152,8 @@ class AIService:
     async def extract_keywords(self, text: str, max_keywords: int = 10) -> List[str]:
         """Extract keywords from text."""
         try:
-            response = await openai.ChatCompletion.acreate(
+            client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+            response = await client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {
